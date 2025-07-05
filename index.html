@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triangle Formulas</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>🔺 Triangle Formulas with Animation</h1>
+  </header>
+
+  <section class="triangle-box">
+    <div class="diagram">
+      <svg width="300" height="250" viewBox="0 0 300 250">
+        <polygon points="50,200 250,200 150,50" fill="#E0F7FA" stroke="#00796B" stroke-width="3"/>
+        <line x1="150" y1="50" x2="150" y2="200" stroke="#FF5722" stroke-width="2" stroke-dasharray="5,5">
+          <animate attributeName="y2" from="50" to="200" dur="2s" repeatCount="indefinite"/>
+        </line>
+        <text x="145" y="230" fill="#000">base</text>
+        <text x="155" y="125" fill="#000">height</text>
+      </svg>
+    </div>
+
+    <div class="formulas">
+      <h2>📐 Formulas:</h2>
+      <ul>
+        <li><strong>Perimeter</strong> = a + b + c</li>
+        <li><strong>Area</strong> = ½ × base × height</li>
+        <li><strong>Heron’s Formula</strong>:<br>
+          s = (a + b + c)/2<br>
+          Area = √[s(s − a)(s − b)(s − c)]
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed for Students | More coming soon...</p>
+  </footer>
+</body>
+</html>
