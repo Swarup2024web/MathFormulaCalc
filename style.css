@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,22 +10,45 @@ body {
   background: linear-gradient(135deg, #e0f7fa, #ffffff);
   color: #333;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 2rem;
 }
 
-/* Main container */
+/* Layout Container */
 .container {
-  width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* Neumorphic base */
+/* Header */
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #00695c;
+}
+
+header p {
+  color: #004d40;
+  font-size: 1rem;
+}
+
+/* Glassmorphic Effect */
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+/* Neumorphic Effect */
 .neumorphic {
   background: #e0f2f1;
   border-radius: 20px;
@@ -33,52 +56,59 @@ body {
     8px 8px 16px #b2dfdb,
     -8px -8px 16px #ffffff;
   padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-/* Glassmorphic panels */
-.glassmorphic {
-  background: rgba(255, 255, 255, 0.35);
-  border-radius: 20px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 2rem;
-  text-align: center;
+/* Controls */
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Header */
-header h1 {
-  font-size: 2rem;
-  color: #00695c;
-  margin-bottom: 0.5rem;
-}
-
-header p {
+.controls button {
+  background: #ffffff44;
+  border: none;
+  padding: 0.7rem 1.2rem;
   font-size: 1rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #b2ebf2;
   color: #004d40;
 }
 
-/* Content Layout */
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  align-items: center;
-}
-
-/* Diagram box */
+/* Visual Area */
 .visual-box {
-  flex: 1 1 350px;
-  text-align: center;
+  flex: 1 1 500px;
+  background: #ffffffcc;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: inset 0 0 20px #c8e6c9;
 }
 
-/* Formula box */
+#triangle-svg {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(45deg, #e3f2fd, #ffffff);
+  border-radius: 10px;
+  border: 1px solid #b2ebf2;
+}
+
+/* Formula & Results */
 .formula-box {
   flex: 1 1 350px;
   text-align: left;
-  background: rgba(255, 255, 255, 0.45);
 }
 
 .formula-box h2 {
@@ -89,29 +119,45 @@ header p {
 .formula-box ul {
   list-style: disc;
   padding-left: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .formula-box li {
-  margin-bottom: 1rem;
-  color: #333;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* Result Data */
+#results {
+  color: #00695c;
+  font-size: 0.95rem;
   line-height: 1.5;
-  font-size: 1rem;
+  background: #ffffffa0;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: inset 0 0 8px #e0f2f1;
 }
 
 /* Footer */
 footer {
-  font-size: 0.9rem;
+  text-align: center;
+  font-size: 0.85rem;
   color: #004d40;
 }
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  .content {
+  .neumorphic {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls {
     flex-direction: column;
   }
 
-  .visual-box,
-  .formula-box {
+  .formula-box,
+  .visual-box {
     width: 100%;
   }
 }
