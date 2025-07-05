@@ -1,0 +1,52 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #fff);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #004d40;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.triangle-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.diagram {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.formulas {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #00796B;
+  color: white;
+  font-size: 0.9rem;
+}
