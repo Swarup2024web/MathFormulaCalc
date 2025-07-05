@@ -3,45 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Triangle Formula Visualizer</title>
+  <title>Triangle Master Tool</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <header class="glassmorphic">
-      <h1>🔺 Triangle Formula Visualizer</h1>
-      <p>Explore geometry interactively with animations and formulas.</p>
+      <h1>🔺 Triangle Master Tool</h1>
+      <p>Interactive Geometry | Drag, Calculate, Visualize</p>
     </header>
 
+    <!-- Controls -->
+    <div class="controls glassmorphic">
+      <button id="toggle-grid">🗺️ Toggle Grid</button>
+      <button id="toggle-protractor">📐 Toggle Protractor</button>
+      <button id="reset-triangle">🆕 Draw New Triangle</button>
+    </div>
+
+    <!-- Main Content -->
     <main class="content neumorphic">
+      <!-- Visual Box -->
       <section class="visual-box">
-        <h2>📐 Dynamic Triangle Diagram</h2>
-        <svg id="triangle-svg" width="300" height="250" viewBox="0 0 300 250">
-          <polygon points="50,200 250,200 150,50" fill="#e3f2fd" stroke="#0288d1" stroke-width="3"/>
-          <line x1="150" y1="50" x2="150" y2="200" stroke="#ff7043" stroke-width="2" stroke-dasharray="5,5">
-            <animate attributeName="y2" from="50" to="200" dur="2s" repeatCount="indefinite"/>
-          </line>
-          <text x="140" y="230" fill="#00695c">Base</text>
-          <text x="160" y="125" fill="#00695c">Height</text>
+        <svg id="triangle-svg" width="500" height="400" viewBox="0 0 500 400">
+          <!-- Grid lines, triangle, arcs, circles, labels will be added via JS -->
         </svg>
       </section>
 
+      <!-- Formula + Results -->
       <section class="formula-box glassmorphic">
-        <h2>📊 Triangle Formulas</h2>
-        <ul>
-          <li><strong>Perimeter</strong> = a + b + c</li>
-          <li><strong>Area</strong> = ½ × base × height</li>
-          <li><strong>Heron’s Formula</strong>:<br>
-            s = (a + b + c) / 2<br>
-            Area = √[s(s − a)(s − b)(s − c)]
-          </li>
-        </ul>
+        <h2>📊 Calculations & Properties</h2>
+        <div id="triangle-info">
+          <ul>
+            <li><strong>Sides</strong>: a, b, c</li>
+            <li><strong>Perimeter</strong> = a + b + c</li>
+            <li><strong>Area</strong> = ½ × base × height</li>
+            <li><strong>Heron’s Area</strong>: √[s(s−a)(s−b)(s−c)]</li>
+            <li><strong>Type</strong>: Equilateral, Isosceles, Scalene, Right</li>
+            <li><strong>Angles</strong>: A, B, C in degrees</li>
+            <li><strong>Height</strong> (relative to base)</li>
+            <li><strong>Inradius</strong> and <strong>Circumradius</strong></li>
+          </ul>
+          <div id="results" style="margin-top: 1rem;"></div>
+        </div>
       </section>
     </main>
 
     <footer class="glassmorphic">
-      <p>Made for Students | More interactive tools coming soon...</p>
+      <p>Built by Swarup's Geometry Lab | © 2025</p>
     </footer>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
